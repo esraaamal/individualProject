@@ -15,6 +15,7 @@ let correctAnswer1=document.querySelector('.correctAnswer1')
 let backContainer=document.querySelector('.backContainer')
 console.log(correctAnswer1)
 
+const circleOrder=document.querySelectorAll('.circleOrder span')
 
 //know what is the answer was clicked by user
 const answerEls=document.querySelectorAll('.answer')
@@ -46,7 +47,7 @@ function getJson(path){
     let str=`${jsonObj}`
 
     console.log(data[str])
-    
+    circleOrder[currentQuiz].style.background="#64bcf4"
         loadData()
     
         
@@ -102,8 +103,10 @@ function getJson(path){
             currentQuiz++;
             if(currentQuiz==data[str].length-1){
                 submitBtn.innerHTML="Submit"
+                submitBtn.style.marginRight="100px"
             }
        if(currentQuiz<data[str].length){
+        circleOrder[currentQuiz].style.background="#64bcf4"
            loadData()
        }else{
         e.preventDefault()

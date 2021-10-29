@@ -5,36 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="css/quiz.css">
     <title>Quiz</title>
 </head>
 <body>
     <!-- //quiz information ///// -->
-    <div class="quiz-container">
-        <div class="quiz-header" id="quiz">
-            <h2 id="question">Question Text</h2>
-            <ul>
-                <li>
-                    <input class="answer" type="radio" id="a" name="answer">
-                    <label id="a-text" for="a">Question</label>
-                </li>
-                <li>
-                    <input class="answer" type="radio" id="b" name="answer">
-                    <label id="b-text" for="b">Question</label>
-                </li>
-                <li>
-                    <input class="answer" type="radio" id="c" name="answer">
-                    <label id="c-text" for="c">Question</label>
-                </li>
-                <li>
-                    <input class="answer" type="radio" id="d" name="answer">
-                    <label id="d-text" for="d">Question</label>
-                </li>
+    <div class="gridContainer">
+        <div class="brackt">{</div>
+        <!-- ////////////////// -->
+        <div class="quizBody">
+            <div class="quiz-container">
+                <!-- ///light border/// -->
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <!-- //////////////////// -->
+                <div class="quiz-header" id="quiz">
+                    <h2 id="question">Question Text</h2>
+                    <ul>
+                        <li>
+                            <input class="answer" type="radio" id="a" name="answer">
+                            <label id="a-text" for="a">Question</label>
+                        </li>
+                        <li>
+                            <input class="answer" type="radio" id="b" name="answer">
+                            <label id="b-text" for="b">Question</label>
+                        </li>
+                        <li>
+                            <input class="answer" type="radio" id="c" name="answer">
+                            <label id="c-text" for="c">Question</label>
+                        </li>
+                        <li>
+                            <input class="answer" type="radio" id="d" name="answer">
+                            <label id="d-text" for="d">Question</label>
+                        </li>
 
 
-            </ul>
+                    </ul>
+                </div>
+                <a id="resultPage" href="#"> <button id="submit" type="submit">
+                        <i class="fas fa-arrow-circle-right"></i></button></a>
+
+
+
+            </div>
+
+            <div class="circleOrder">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <a id="resultPage" href="#"> <button id="submit" type="submit">Next</button></a>
+        <div class="exitQuiz">
+           <a href="index.html"><button>Exit Quiz</button></a> 
+        </div>
     </div>
     <!-- //End quiz information ///// -->
 
