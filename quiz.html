@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/quiz.css">
     <title>Quiz</title>
 </head>
 <body>
+    <!-- loading section -->
+    <div class="loader">
+        <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+    </div>
     <!-- //quiz information ///// -->
     <div class="gridContainer">
         <div class="brackt">{</div>
@@ -83,7 +90,15 @@
     </div>
     <!-- //End pop up result////// -->
 
+<script>
+    
+    $(window).on('load',function(){
+        console.log('hi')
+        $(".loader").fadeOut(1000);
 
+        setTimeout(() => {$(".gridContainer").css("display", "grid")}, 1000);
+    })
+</script>
     <script src="js/quiz.js"></script>
 </body>
 
